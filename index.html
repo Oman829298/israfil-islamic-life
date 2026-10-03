@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ইসরাফিল ইসলামিক ও শিক্ষামূলক অ্যাপস কালেকশন</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+            margin: 0;
+            padding: 0;
+            color: #f8fafc;
+        }
+        
+        /* প্রিমিয়াম হেডার সেকশন */
+        header {
+            background: rgba(2, 44, 34, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            text-align: center;
+            padding: 40px 20px 30px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-bottom: 2px solid #059669;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+        header p {
+            margin: 10px 0 15px 0;
+            font-size: 14px;
+            color: #a7f3d0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        /* প্রিমিয়াম অ্যাপ কার্ড ডিজাইন */
+        .app-card {
+            background: #064e3b;
+            border: 1px solid #059669;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+            margin-bottom: 35px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            background-image: radial-gradient(circle at top right, rgba(16, 185, 129, 0.15), transparent 60%);
+        }
+        .app-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+            border-color: #34d399;
+        }
+
+        /* ট্যাগ বা ক্যাটাগরি */
+        .app-tag {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            border: 1px solid rgba(52, 211, 153, 0.3);
+        }
+
+        /* ফাইভ স্টার রেটিং স্টাইল */
+        .rating-stars {
+            color: #fbbf24;
+            font-size: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 600;
+        }
+        .rating-stars span {
+            color: #94a3b8;
+            font-size: 13px;
+            font-weight: normal;
+        }
+
+        .app-card h2 {
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 12px;
+            color: #ffffff;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+        .app-card p {
+            line-height: 1.8;
+            color: #cbd5e1;
+            font-size: 15px;
+        }
+        
+        .features-list {
+            background: rgba(2, 44, 34, 0.6);
+            border: 1px solid #047857;
+            padding: 18px 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .features-list strong {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 10px;
+            color: #34d399;
+        }
+        .features-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .features-list li {
+            margin-bottom: 8px;
+            color: #e2e8f0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* প্রিমিয়াম গোল্ডেন/অরেঞ্জ ডাউনলোড বাটন */
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #0f172a;
+            text-align: center;
+            padding: 16px 20px;
+            font-size: 17px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 35px;
+            margin-top: 25px;
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.6);
+            color: #000000;
+        }
+
+        /* ফিচারের ছোট ব্যাজসমূহ */
+        .card-meta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+        .card-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #022c22;
+            color: #94a3b8;
+            font-size: 14px;
+            margin-top: 40px;
+            border-top: 2px solid #064e3b;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 22px;
+            }
+            .app-card {
+                padding: 20px;
+            }
+            .app-card h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- প্রিমিয়াম হেডার সেকশন -->
+    <header>
+        <h1>🌟 ইসরাফিল প্রিমিয়াম অ্যাপস কর্নার 🌟</h1>
+        <p>আপনার দ্বীনি জীবন ও শিশুদের সুশিক্ষাকে সমৃদ্ধ করতে আমাদের তৈরি বিশেষ ৩টি অ্যান্ড্রয়েড অ্যাপ্লিকেশন</p>
+    </header>
+
+    <div class="container">
+
+        <!-- ১ নম্বর অ্যাপ: ইসরাফিল ইসলামিক লাইফ -->
+        <div class="app-card">
+            <div class="app-tag">অ্যান্ড্রয়েড অ্যাপ · বাংলা</div>
+            <div class="rating-stars">
+                ⭐⭐⭐⭐⭐ <span>(৫.০ / ৫ রেটিং প্রাপ্ত)</span>
+            </div>
+            <h2>নামাজ, কুরআন আর দুআ — এক হাতের মুঠোয়</h2>
+            <p>এই অ্যাপটিতে রয়েছে ৫ ওয়াক্ত নামাজের নিখুঁত সময়সূচী, সেহরি ও ইফতারের কাউন্টডাউন, কিবলা কম্পাস, তসবীহ এবং মানুষের বিপদে পাশে দাঁড়ানোর জন্য জরুরি <strong>রক্তদান সেবা কেন্দ্র ও অ্যাম্বুলেন্স হেল্পলাইন</strong>!</p>
+            
+            <div class="features-list">
+                <strong>✨ প্রধান সুবিধাসমূহ:</strong>
+                <ul>
+                    <li>⏰ ৫ ওয়াক্ত সালাত ও অটো আজান সিস্টেম</li>
+                    <li>🌙 আজকের ইফতার ও সেহরির সঠিক সময়সূচী</li>
+                    <li>👶 বাচ্চাদের পাঠশালা (বর্ণমালা, সংখ্যা, আরবি হরফ ও গল্প)</li>
+                    <li>📿 সহিহ হাদিস, দুআ, তসবীহ ও ৬ মাসের ইসলামিক ক্যালেন্ডার</li>
+                    <li>🚑 জরুরি রক্তদান ও অ্যাম্বুলেন্স হেল্পলাইন সেবা</li>
+                </ul>
+            </div>
+
+            <div class="card-meta">
+                <span>⚡ অ্যান্ড্রয়েড ৫.০+</span>
+                <span>💎 সম্পূর্ণ ফ্রি</span>
+                <span>🛡️ বিজ্ঞাপন মুক্ত পাঠ</span>
+            </div>
+
+            <!-- গিটহাবের সরাসরি ডাউনলোড লিংক (অ্যাপ ১) -->
+            <a href="GITHUB_LINK_1" class="download-btn">📥 ১ নম্বর অ্যাপ ডাউনলোড করুন (APK)</a>
+        </div>
+
+        <!-- ২ নম্বর অ্যাপ: ৩০ পারা কুরআন শরীফ -->
+        <div class="app-card">
+            <div class="app-tag">অ্যান্ড্রয়েড অ্যাপ · কুরআন মাজীদ</div>
+            <div class="rating-stars">
+                ⭐⭐⭐⭐⭐ <span>(৫.০ / ৫ রেটিং প্রাপ্ত)</span>
+            </div>
+            <h2>৩০ পারা কুরআন মাজীদ — সহজে তেলাওয়াত</h2>
+            <p>খুব সুন্দর এবং পরিষ্কার ফন্টে সাজানো পবিত্র আল-কুরআনুল কারীম। যেকোনো জায়গা থেকে ১ থেকে ৩০ পারা পর্যন্ত সহজে তেলাওয়াত করার জন্য এবং পেজ পরিবর্তন করার জন্য এটি অত্যন্ত উপযোগী একটি প্রিমিয়াম অ্যাপ।</p>
+            
+            <div class="features-list">
+                <strong>✨ প্রধান সুবিধাসমূহ:</strong>
+                <ul>
+                    <li>📖 সম্পূর্ণ ৩০ পারার নির্ভুল ও স্পষ্ট বিন্যাস</li>
+                    <li>⚡ খুব সহজে পৃষ্ঠা উল্টানোর ব্যবস্থা</li>
+                    <li>👁️ চোখ জুড়ানো এবং সহজ রিডিং ইন্টারফেস</li>
+                </ul>
+            </div>
+
+            <div class="card-meta">
+                <span>⚡ অ্যান্ড্রয়েড ৫.০+</span>
+                <span>💎 সম্পূর্ণ ফ্রি</span>
+                <span>🛡️️ স্পষ্ট ও বড় ফন্ট</span>
+            </div>
+
+            <!-- গিটহাবের সরাসরি ডাউনলোড লিংক (অ্যাপ ২) -->
+            <a href="GITHUB_LINK_2" class="download-btn">📥 ৩০ পারা কুরআন অ্যাপ ডাউনলোড করুন (APK)</a>
+        </div>
+
+        <!-- ৩ নম্বর অ্যাপ: বাচ্চাদের শিক্ষা, গল্প ও নবীদের জীবনী -->
+        <div class="app-card">
+            <div class="app-tag">অ্যান্ড্রয়েড অ্যাপ · শিশুকিশোর</div>
+            <div class="rating-stars">
+                ⭐⭐⭐⭐⭐ <span>(৫.০ / ৫ রেটিং প্রাপ্ত)</span>
+            </div>
+            <h2>বাচ্চাদের শিক্ষালয়, গল্প ও নবীদের জীবনী</h2>
+            <p>ছোট সোনামণিদের জন্য সপ্তাহের সাতটি দিন, বাংলা স্বরবর্ণ শিক্ষা (অ, আ...), মজার ও শিক্ষণীয় ১০টি দীর্ঘ গল্প এবং মহানবী হযরত মুহাম্মদ (সা.)-সহ বিভিন্ন নবীদের জীবনী নিয়ে তৈরি অত্যন্ত চমৎকার একটি শিক্ষামূলক অ্যাপ।</p>
+            
+            <div class="features-list">
+                <strong>✨ প্রধান সুবিধাসমূহ:</strong>
+                <ul>
+                    <li>🎨 সপ্তাহের ৭ দিন ও বাংলা স্বরবর্ণ শিক্ষা</li>
+                    <li>📚 কার্টুন স্টাইলে মজার ও শিক্ষণীয় ১০টি দীর্ঘ গল্প</li>
+                    <li>📜 মহানবী (সা.) ও অন্যান্য নবীদের জীবনীর সারসংক্ষেপ</li>
+                    <li>⚙️ বাংলা/ইংরেজি ভাষা পরিবর্তন এবং লাইট/ডার্ক মোড</li>
+                </ul>
+            </div>
+
+            <div class="card-meta">
+                <span>⚡ অ্যান্ড্রয়েড ৫.০+</span>
+                <span>💎 সম্পূর্ণ ফ্রি</span>
+                <span>🛡️ শিশুকিশোর উপযোগী</span>
+            </div>
+
+            <!-- গিটহাবের সরাসরি ডাউনলোড লিংক (অ্যাপ ৩) -->
+            <a href="GITHUB_LINK_3" class="download-btn">📥 ৩ নম্বর অ্যাপ ডাউনলোড করুন (APK)</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; ২০২৬ ইসরাফিল ইসলামিক অ্যাপস কালেকশন। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+</body>
+</html>
